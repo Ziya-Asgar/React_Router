@@ -2,13 +2,13 @@
 
 - [React Router](#react-router)
   - [Some useful links](#some-useful-links)
-  - [Install and use `react-router-dom`](#install-and-use-react-router-dom)
+  - [Getting Started](#getting-started)
   - [Define routes](#define-routes)
   - [Navigation with `Link`](#navigation-with-link)
   - [Dynamic Routes with `useParams`](#dynamic-routes-with-useparams)
   - [General Route](#general-route)
   - [Nesting Routes](#nesting-routes)
-    - [Rendering the same component for any nested route and the usage of the  component](#rendering-the-same-component-for-any-nested-route-and-the-usage-of-the--component)
+    - [Rendering the same component for any nested route and the usage of the component](#rendering-the-same-component-for-any-nested-route-and-the-usage-of-the--component)
     - [Rendering the same component for the routes that don't share the same URL](#rendering-the-same-component-for-the-routes-that-dont-share-the-same-url)
     - [`useOutletContext`](#useoutletcontext)
   - [Defining the same route more than once](#defining-the-same-route-more-than-once)
@@ -33,34 +33,11 @@
 
 <hr>
 
-## Install and use `react-router-dom`
+## Getting Started
 
-To use the **React Router**, you need to install it:
+[Getting Started](./RR_GettingStarted.md)
 
-```
-npm i react-router-dom
-```
-
-After installing the `react-router-dom`, we can import `BrowserRouter`. After importing it, we will need to wrap our `<App/>` inside `<BrowserRouter>...</BrowserRouter` component.
-
-```js
-// index.js
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { BrowserRouter } from "react-router-dom";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
-```
-
-After we have our router setup in the _index.js_ file, we need to define the routes for our application.
+<hr>
 
 ## Define routes
 
@@ -742,8 +719,6 @@ export function App() {
 }
 ```
 
-
-
 <hr>
 
 ## More about `<Link/>`
@@ -766,7 +741,9 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/" replace>Home</Link>
+            <Link to="/" replace>
+              Home
+            </Link>
           </li>
           <li>
             <Link to="/books">Books</Link>
@@ -804,7 +781,9 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/" reloadDocument>Home</Link>
+            <Link to="/" reloadDocument>
+              Home
+            </Link>
           </li>
           <li>
             <Link to="/books">Books</Link>
@@ -895,9 +874,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">
-              Home
-            </NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
             <NavLink
